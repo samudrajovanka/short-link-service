@@ -1,4 +1,1 @@
-```
-npm install
-npm run start
-```
+# Short Link Service
