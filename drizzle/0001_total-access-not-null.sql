@@ -1,0 +1,1 @@
+ALTER TABLE "short-links" ALTER COLUMN "total_access" SET NOT NULL;

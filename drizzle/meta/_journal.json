@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1740061174098,
+      "tag": "0000_create-short-links-table",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1746545167029,
+      "tag": "0001_total-access-not-null",
+      "breakpoints": true
+    }
+  ]
+}
