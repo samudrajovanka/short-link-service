@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { validationMiddleware } from "../../middlewares/validation";
+import { validationMiddleware } from "@/middlewares/validation";
 
 export const createShortLinkValidator = z.object({
   originalUrl: z.string().url(),

@@ -1,0 +1,1 @@
+export * from '@/modules/shortLink/shortLink.schema';

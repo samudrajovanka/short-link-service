@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import shortLinkRoute from "../modules/shortLink/shortLink.route";
+import shortLinkRoute from "@/modules/shortLink/shortLink.route";
 
 const apiApp = new Hono().basePath('/api')
 
