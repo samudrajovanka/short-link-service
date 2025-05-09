@@ -1,5 +1,5 @@
 import { Context } from "hono";
-import { PaginationParams } from "@/utils/validators/paginationParams";
+import { PaginationParams } from "../validators/paginationParams";
 
 export const getPaginationFromQuery = (c: Context) => {
   // @ts-ignore

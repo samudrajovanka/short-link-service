@@ -1,1 +1,1 @@
-export * from '@/modules/shortLink/shortLink.schema';
+export * from '../modules/shortLink/shortLink.schema';

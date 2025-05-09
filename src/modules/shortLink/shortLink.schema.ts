@@ -1,6 +1,6 @@
 import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
 
-import { baseColums } from "@/utils/helpers/schema";
+import { baseColums } from "../../utils/helpers/schema";
 
 export const shortLinksTable = pgTable("short-links", {
   ...baseColums,

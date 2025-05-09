@@ -1,4 +1,4 @@
-import ErrorConstant from '@/constants/error';
+import ErrorConstant from '../constants/error';
 
 interface ClientErrorOptions {
   statusCode?: number;

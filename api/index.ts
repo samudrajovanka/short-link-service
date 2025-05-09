@@ -1,8 +1,8 @@
 import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 
-import routes from '@/routes'
-import { errorHandler } from "@/utils/helpers/response"
+import routes from '../src/routes'
+import { errorHandler } from "../src/utils/helpers/response"
 
 export const config = {
   runtime: 'edge'

@@ -1,6 +1,5 @@
-import { HTTPException } from "hono/http-exception"
-import ErrorConstant from "@/constants/error"
-import ClientError from "@/exceptions/ClientError"
+import ErrorConstant from "../../constants/error"
+import ClientError from "../../exceptions/ClientError"
 import { PaginationMetaResponse } from "./pagination"
 import { ContentfulStatusCode } from "hono/utils/http-status"
 import { Context } from "hono"

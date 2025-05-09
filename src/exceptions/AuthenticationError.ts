@@ -1,4 +1,4 @@
-import ErrorConstant from '@/constants/error';
+import ErrorConstant from '../constants/error';
 import ClientError from './ClientError';
 
 // Define the options interface for the constructor

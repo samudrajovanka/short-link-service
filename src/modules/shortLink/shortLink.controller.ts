@@ -1,8 +1,8 @@
 import { createFactory } from 'hono/factory'
-import { successResponse } from "@/utils/helpers/response"
-import { zPaginationParamsValidator } from "@/utils/validators/paginationParams"
+import { successResponse } from "../../utils/helpers/response"
+import { zPaginationParamsValidator } from "../../utils/validators/paginationParams"
 import { zCreateShortLinkValidator, zUpdateShortLinkValidator } from "./shortLink.validator"
-import { getPaginationFromQuery } from "@/utils/helpers/pagination"
+import { getPaginationFromQuery } from "../../utils/helpers/pagination"
 import ShortLinkService from "./shortLink.service"
 
 const {

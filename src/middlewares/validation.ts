@@ -1,8 +1,8 @@
 import { z } from 'zod'
 import { zValidator } from '@hono/zod-validator'
 import { ValidationTargets } from "hono"
-import ClientError from "@/exceptions/ClientError"
-import ErrorConstant from "@/constants/error"
+import ClientError from "../exceptions/ClientError"
+import ErrorConstant from "../constants/error"
 
 export const validationMiddleware = (target: keyof ValidationTargets, schema: z.ZodSchema) => {
   return zValidator(target, schema, (result, c) => {
