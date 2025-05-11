@@ -6,6 +6,7 @@ import routes from '../src/routes'
 import { clientErrorResponse, errorHandler } from "../src/utils/helpers/response"
 import { logMiddleware } from "../src/middlewares/log"
 import NotFoundError from "../src/exceptions/NotFoundError"
+import { apiKeyMiddleware } from "../src/middlewares/apiKey"
 
 export const config = {
   runtime: 'edge'
@@ -16,6 +17,7 @@ const app = new Hono()
 // MIDDLEWARES
 app.use(trimTrailingSlash())
 app.use(logMiddleware)
+app.use(apiKeyMiddleware)
 
 // ROUTES
 app.route('/', routes)
