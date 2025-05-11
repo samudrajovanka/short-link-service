@@ -36,8 +36,6 @@ export const serverErrorResponse = (error: Error) => ({
 });
 
 export const errorHandler = (error: Error, c: Context) => {
-  console.log("Error", error)
-  
   if (error instanceof ClientError) {
     return c.json(clientErrorResponse(error), error.statusCode as ContentfulStatusCode)
   }
@@ -78,10 +76,6 @@ export const errorHandler = (error: Error, c: Context) => {
   //       type: ErrorConstant.type.DATABASE_VALIDATION
   //     })
   //   ));
-  // }
-
-  // if (error instanceof ClientError) {
-  //   return res.status(error.statusCode).json(clientErrorResponse(error));
   // }
 
   return c.json(serverErrorResponse(error), 500);
