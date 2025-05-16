@@ -3,7 +3,7 @@ import { useDb } from "../../config/db"
 import { shortLinksTable } from "./shortLink.schema"
 import { getPaginationMetaResponse, Pagination } from "../../utils/helpers/pagination"
 import { z } from "zod"
-import { createShortLinkValidator } from "./shortLink.validator"
+import { createShortLinkValidator, updateShortLinkValidator } from "./shortLink.validator"
 import { DatabaseError } from "@neondatabase/serverless"
 import ConflictError from "../../exceptions/ConflictError"
 import PgErrorConstant from "../../constants/pgError"
@@ -116,7 +116,7 @@ export default class ShortLinkService {
     return link.id
   }
 
-  async updateBySlug(slug: string, payload: z.infer<typeof createShortLinkValidator>) {
+  async updateBySlug(slug: string, payload: z.infer<typeof updateShortLinkValidator>) {
     try {
       return await this.db.transaction(async (tx) => {
         const [link] = await this.db
@@ -129,7 +129,7 @@ export default class ShortLinkService {
           throw new NotFoundError(ErrorConstant.template.notFound("Short link"))
         }
         
-        if (payload.slug) {
+        if (payload.slug && payload.slug !== slug) {
           const TEN_MINUTES = 10 * 60 * 1000
           const isUpperThreshold = checkDifferenceTime(new Date(link.createdAt), new Date(), TEN_MINUTES)
     
